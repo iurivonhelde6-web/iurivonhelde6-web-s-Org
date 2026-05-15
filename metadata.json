@@ -1,0 +1,6 @@
+{
+  "name": "System app Padaria",
+  "description": "Sistema completo e profissional de gestão para padaria com controle de estoque, PDV, fluxo de caixa e relatórios.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}
