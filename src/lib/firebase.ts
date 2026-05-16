@@ -5,7 +5,7 @@ import { initializeFirestore } from 'firebase/firestore';
 // Use environment variables if provided (e.g., in Vercel or Custom deploy)
 // Otherwise fallback to the AI Studio auto-generated config
 const config = {
-  apiKey: "AIzaSyAiSWiVJQ8wO1svQ33OxYdrnL-bLFvUVHE",
+  apiKey: "AIzaSyAiSWiVJQ8w0lsvQ330xYdrnL-bLFvUVHE",
   authDomain: "system-padaria.firebaseapp.com",
   projectId: "system-padaria",
   storageBucket: "system-padaria.firebasestorage.app",
