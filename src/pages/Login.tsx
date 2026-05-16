@@ -14,8 +14,9 @@ export function Login() {
     try {
       localStorage.setItem('intended_role', role);
       await loginWithGoogle();
-    } catch (error) {
-      alert("Erro ao fazer login. Tente novamente.");
+    } catch (error: any) {
+      alert(`Erro ao fazer login: ${error.message || 'Tente novamente.'}`);
+      console.error(error);
     }
   };
 
