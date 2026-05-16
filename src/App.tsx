@@ -55,8 +55,9 @@ export default function App() {
           setUser(currentUser);
         } catch (error) {
           console.error("Error fetching user role:", error);
-          setUserRole('funcionario');
-          setCurrentPage('pos');
+          const intendedRole = localStorage.getItem('intended_role') as UserRole || 'funcionario';
+          setUserRole(intendedRole);
+          setCurrentPage(intendedRole === 'admin' ? 'dashboard' : 'pos');
           setUser(currentUser);
         }
       } else {
