@@ -1,11 +1,11 @@
 import { initializeApp } from 'firebase/app';
 import { getAuth, GoogleAuthProvider, signInWithPopup, signOut } from 'firebase/auth';
-import { initializeFirestore } from 'firebase/firestore';
+import { getFirestore } from 'firebase/firestore';
 
 // Use environment variables if provided (e.g., in Vercel or Custom deploy)
 // Otherwise fallback to the AI Studio auto-generated config
 const config = {
-  apiKey: "AIzaSyAiSWiVJQ8w0lsvQ330xYdrnL-bLFvUVHE",
+  apiKey: "AIzaSyAiSWiVJQ8wO1svQ33OxYdrnL-bLFvUVHE",
   authDomain: "system-padaria.firebaseapp.com",
   projectId: "system-padaria",
   storageBucket: "system-padaria.firebasestorage.app",
@@ -15,9 +15,7 @@ const config = {
 
 const app = initializeApp(config);
 
-export const db = initializeFirestore(app, {
-  experimentalForceLongPolling: true,
-});
+export const db = getFirestore(app);
 export const auth = getAuth(app);
 export const googleProvider = new GoogleAuthProvider();
 
