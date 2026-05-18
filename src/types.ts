@@ -24,7 +24,7 @@ export interface CashTransaction {
   amount: number;
   description: string;
   date: string;
-  paymentMethod?: "dinheiro" | "credito" | "debito"; // Optional for generic transactions, required for sales
+  paymentMethod?: "dinheiro" | "pix" | "credito" | "debito"; // Optional for generic transactions, required for sales
 }
 
 export interface SaleItem {
