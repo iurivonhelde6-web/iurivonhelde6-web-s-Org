@@ -123,7 +123,7 @@ export default function Dashboard({ setPage }: { setPage?: (page: string) => voi
             <span>Receita (Últimos 7 dias)</span>
           </div>
           <div className="h-56 w-full mt-5">
-            <ResponsiveContainer width="100%" height="100%">
+            <ResponsiveContainer width="100%" height="100%" minWidth={1} minHeight={1}>
               <BarChart data={chartData}>
                 <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#E2E8F0" />
                 <XAxis dataKey="name" axisLine={false} tickLine={false} tick={{fill: '#94a3b8', fontSize: 11}} />

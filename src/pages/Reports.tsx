@@ -88,7 +88,7 @@ export default function Reports() {
         <div className="bg-white p-6 rounded-[16px] border border-[#f1f5f9] shadow-[0_4px_6px_-1px_rgba(0,0,0,0.05)]">
           <h3 className="text-[16px] font-semibold text-slate-800 mb-6">Fluxo - Últimos 7 dias</h3>
           <div className="h-72 w-full">
-            <ResponsiveContainer width="100%" height="100%">
+            <ResponsiveContainer width="100%" height="100%" minWidth={1} minHeight={1}>
               <AreaChart data={areaData}>
                 <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#E2E8F0" />
                 <XAxis dataKey="name" axisLine={false} tickLine={false} tick={{fill: '#64748B', fontSize: 12}} />
@@ -115,7 +115,7 @@ export default function Reports() {
           
           {pieData.length > 0 ? (
             <div className="h-72 w-full flex items-center justify-center">
-              <ResponsiveContainer width="100%" height="100%">
+              <ResponsiveContainer width="100%" height="100%" minWidth={1} minHeight={1}>
                 <PieChart>
                   <Pie
                     data={pieData}

@@ -39,7 +39,10 @@ export default function App() {
           let role: UserRole = intendedRole;
           
           if (userSnap.exists()) {
-            await setDoc(userRef, { role: role }, { merge: true });
+             const data = userSnap.data();
+             if (data.role) {
+                role = data.role as UserRole;
+             }
           } else {
             await setDoc(userRef, {
               uid: currentUser.uid,
@@ -54,7 +57,7 @@ export default function App() {
           setCurrentPage(role === 'admin' ? 'dashboard' : 'pos');
           setUser(currentUser);
         } catch (error) {
-          console.error("Error fetching user role:", error);
+          console.warn("Aviso: Permissões insuficientes no Firestore. Continuando com perfil local.", error);
           const intendedRole = localStorage.getItem('intended_role') as UserRole || 'funcionario';
           setUserRole(intendedRole);
           setCurrentPage(intendedRole === 'admin' ? 'dashboard' : 'pos');
