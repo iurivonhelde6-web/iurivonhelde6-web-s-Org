@@ -16,7 +16,7 @@ export default function POS() {
   const { state, registerSale, deleteSale, editingSaleId, setEditingSaleId } = useApp();
   const [searchTerm, setSearchTerm] = useState("");
   const [cart, setCart] = useState<CartItem[]>([]);
-  const [paymentMethod, setPaymentMethod] = useState<"dinheiro" | "debito" | "credito">("dinheiro");
+  const [paymentMethod, setPaymentMethod] = useState<"dinheiro" | "pix" | "debito" | "credito">("dinheiro");
   
   const [isHistoryModalOpen, setIsHistoryModalOpen] = useState(false);
 
@@ -231,7 +231,7 @@ export default function POS() {
           <div className="mb-4">
             <label className="block text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2">Forma de Pagamento</label>
             <div className="grid grid-cols-3 gap-2">
-              {(["dinheiro", "debito", "credito"] as const).map(method => (
+              {(["dinheiro", "pix", "debito", "credito"] as const).map(method => (
                 <button
                   key={method}
                   onClick={() => setPaymentMethod(method)}
