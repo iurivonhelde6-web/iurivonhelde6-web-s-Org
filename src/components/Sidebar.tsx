@@ -53,7 +53,7 @@ export function Sidebar({ currentPage, setPage, isOpen, setIsOpen, userRole }: S
             <div className="w-8 h-8 rounded-md bg-gradient-to-br from-[#800020] to-[#0f172a] flex items-center justify-center shrink-0">
                <Croissant size={16} className="text-white" />
             </div>
-            {'Pão do Céu'}
+            {'Milagre do Pão'}
           </div>
           <button 
             className="lg:hidden text-slate-400 hover:text-slate-800"
