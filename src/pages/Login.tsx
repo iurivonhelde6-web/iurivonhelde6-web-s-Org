@@ -77,7 +77,7 @@ export function Login() {
         </button>
       </div>
       
-      <p className="mt-8 text-slate-400 text-xs">v1.2.0 - ERP Scalable</p>
+      <p className="mt-8 text-slate-400 text-xs">v1.2.0 - ERP VH System</p>
     </div>
   );
 }
