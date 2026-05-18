@@ -38,5 +38,5 @@ export interface Sale {
   totalAmount: number;
   date: string;
   items: SaleItem[];
-  paymentMethod: "dinheiro" | "credito" | "debito";
+  paymentMethod: "dinheiro" | "pix" | "credito" | "debito";
 }
