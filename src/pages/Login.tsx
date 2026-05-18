@@ -60,7 +60,7 @@ export function Login() {
             <label className="block text-sm font-medium text-slate-700 mb-2">Senha do Administrador</label>
             <input
               type="password"
-              placeholder="Digite a senha (admin123)"
+              placeholder="Digite a senha"
               className="w-full border border-slate-300 p-3 rounded-xl focus:ring-2 focus:ring-[#800020] focus:outline-none"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
