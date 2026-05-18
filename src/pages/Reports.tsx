@@ -32,6 +32,7 @@ export default function Reports() {
 
   const pieData = [
     { name: 'Dinheiro', value: salesByMethod['dinheiro'] || 0, color: '#10b981' },
+    { name: 'Pix', value: salesByMethod['pix'] || 0, color: '#11b987' },
     { name: 'Débito', value: salesByMethod['debito'] || 0, color: '#3b82f6' },
     { name: 'Crédito', value: salesByMethod['credito'] || 0, color: '#8b5cf6' },
   ].filter(d => d.value > 0);
